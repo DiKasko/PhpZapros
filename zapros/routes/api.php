@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Zapros\ServicecController;
+use App\Http\Controllers\Zapros\TarifController;
+use App\Http\Controllers\Zapros\UsersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +21,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::apiResources([
+    'users' => UsersController::class,
+    'tarif' => TarifController::class,
+    'servicec' => ServicecController::class,
+]);
 
-Route::get('user', 'App\Http\Controllers\Zapros\Users@user');
-Route::get('tarif', 'App\Http\Controllers\Zapros\Tarifs@tarif');
-Route::get('services', 'App\Http\Controllers\Zapros\Services@services');
+

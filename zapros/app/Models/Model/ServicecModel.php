@@ -10,10 +10,19 @@ class ServicecModel extends Model
     protected $table = "services";
 
     protected $fillable = [
-        'ID',
+        'id',
         'user_id',
         'tarif_id',
-        'payday',
-
+        'payday'
     ];
+
+    public function user()
+    {
+        return $this->hasMany(UsersModel::class,'users_id');
+    }
+    public function tarif()
+    {
+        return $this->hasMany(TarifsModel::class,'id');
+    }
 }
+
