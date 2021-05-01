@@ -13,16 +13,22 @@ class ServicecModel extends Model
         'id',
         'user_id',
         'tarif_id',
-        'payday'
+        'payday',
+
     ];
 
     public function user()
     {
-        return $this->hasMany(UsersModel::class,'users_id');
+        return $this->hasMany(UsersModel::class,'id','user_id');
     }
     public function tarif()
     {
-        return $this->hasMany(TarifsModel::class,'id');
+        return $this->hasMany(TarifsModel::class,'id','tarif_id');
     }
+    public function group()
+    {
+        return $this->hasMany(TarifsModel::class,'tarif_group_id','tarif_group_id');
+    }
+
 }
 

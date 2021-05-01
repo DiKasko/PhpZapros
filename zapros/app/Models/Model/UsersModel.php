@@ -11,7 +11,7 @@ class UsersModel extends Model
     protected $table = "users";
 
     protected $fillable = [
-        'users_id',
+        'id',
         'login',
         'name_last',
         'name_first'

@@ -10,7 +10,7 @@ class TarifsModel extends Model
     protected $table = "tarifs";
 
     protected $fillable = [
-        'ID',
+        'id',
         'title',
         'price',
         'link',
@@ -19,4 +19,13 @@ class TarifsModel extends Model
         'tarif_group_id'
 
     ];
+    public function store(TarifsModel $request)
+    {
+        return response()->json($request->all());
+    }
+
+    public function group()
+    {
+        return $this->hasMany(TarifsModel::class,'tarif_group_id','tarif_group_id');
+    }
 }

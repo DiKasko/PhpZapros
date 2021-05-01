@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Model\ServicecModel;
+use App\Models\Model\TarifsModel;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -14,12 +16,17 @@ class UserResource extends JsonResource
      */
     public function toArray($request)
     {
+
         return [
-            'id' => $this->id,
-            'login' => $this->login,
-            'name_last' => $this->name_last,
-            'name_first'=> $this->name_first
+
+
+            'title' => $this->title,
+            'link' => $this->link,
+            'speed'=> $this->speed,
+            'tarif_group_id' => $this->group,
+
 
         ];
+
     }
 }
