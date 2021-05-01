@@ -11,3 +11,11 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/app/Http/Controllers/Zapros/ServicecController.php
+/database/factories/ServicesFactory.php
+/app/Http/Resources/ServicesResource.php
+/app/Http/Controllers/Zapros/TarifController.php
+/database/factories/TarifFactory.php
+/app/Http/Resources/TarifGroupResource.php
+/app/Http/Controllers/Zapros/UsersController.php
+/database/factories/UsersFactory.php

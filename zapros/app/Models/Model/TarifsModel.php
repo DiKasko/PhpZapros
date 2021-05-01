@@ -21,7 +21,8 @@ class TarifsModel extends Model
     ];
     public function store(TarifsModel $request)
     {
-        return response()->json($request->all());
+        dd($request->json_decode()->all());
+
     }
 
     public function group()
