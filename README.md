@@ -1,6 +1,6 @@
 # PhpZapros
 PhpZapros/zapros/routes/api.php 
-    Route::apiResources([
+    Route::apiResources
         'users' => UsersController::class,
         'tarif' => TarifController::class,
         'servicec' => ServicecController::class,
