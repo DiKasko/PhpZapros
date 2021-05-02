@@ -6,7 +6,7 @@ use App\Models\Model\ServicecModel;
 use App\Models\Model\TarifsModel;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UserResource extends JsonResource
+class TarifResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,7 +19,7 @@ class UserResource extends JsonResource
 
         return [
 
-
+            'id' => $this -> id,
             'title' => $this->title,
             'link' => $this->link,
             'speed'=> $this->speed,

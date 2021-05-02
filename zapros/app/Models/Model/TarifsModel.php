@@ -19,11 +19,7 @@ class TarifsModel extends Model
         'tarif_group_id'
 
     ];
-    public function store(TarifsModel $request)
-    {
-        dd($request->json_decode()->all());
 
-    }
 
     public function group()
     {

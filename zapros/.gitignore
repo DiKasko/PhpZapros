@@ -16,6 +16,6 @@ yarn-error.log
 /app/Http/Resources/ServicesResource.php
 /app/Http/Controllers/Zapros/TarifController.php
 /database/factories/TarifFactory.php
-/app/Http/Resources/TarifGroupResource.php
+/app/Http/Resources/UserResource.php
 /app/Http/Controllers/Zapros/UsersController.php
 /database/factories/UsersFactory.php
